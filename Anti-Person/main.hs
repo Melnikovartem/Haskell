@@ -7,3 +7,10 @@ pair C = G
 
 anti :: [AA] -> [AA]
 anti x = map pair x
+
+main = do
+        putStrLn "Make Anti-Person"
+        x <- getLine
+        let b = map (\y -> read [y]::AA) x
+        putStr $ (concat $ map show (anti b)) ++ "\n"
+
